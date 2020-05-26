@@ -1,0 +1,47 @@
+{% extends "base.html"%}
+
+{% block styles %}
+{{ super() }}
+
+<link rel="stylesheet" type="text/css" media="screen"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+  integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous" />
+{% endblock %}
+
+{% block app_content %}
+<a href="{{ url_for('jogos.create') }}" class="btn btn-default">Nova partida</a>
+<div class="container">
+  <!-- linha dos card -->
+  <div class="row red align-items-center justify-content-center">
+    <!-- Tab cursos conteudo -->
+    <div class="tab-content ">
+      <div class="tab-pane active container " id="ingles">
+        <div class="row">
+          <div class="col col-9">
+            <div class="card">
+              <div class="card-header">
+                Destaque
+              </div>
+              <div class="card-body">
+                <h5 class="card-title">Título especial</h5>
+                <p class="card-text">Com suporte a texto embaixo, que funciona como uma introdução a um conteúdo
+                  adicional.</p>
+                <a href="#" class="btn btn-primary">Editar partida</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-pane container" id="teenkids">
+
+      </div>
+      <div class="tab-pane container" id="incompany">
+
+      </div>
+      <div class="tab-pane container" id="espanhol">
+
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
