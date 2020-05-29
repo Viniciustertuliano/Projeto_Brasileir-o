@@ -1,55 +1,47 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block styles %}
-    {{ super() }}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
+{{ super() }}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css') }}">
 {% endblock %}
 
 {% block title %}
-	{% if title %}
-		{{ title }} - Brasileirão 
-	{% else %}
-        Basileirão FIT
-	{% endif %}
+{% if title %}
+{{ title }} - Brasileirão
+{% else %}
+Basileirão FIT
+{% endif %}
 {% endblock %}
-			
+
 {% block navbar %}
-    <nav class="navbar navbar-default">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ url_for('main.index') }}">Brasileirão</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('main.index') }}">Home</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    {% if current_user.is_anonymous %}
-                    <li><a href="{{ url_for('auth.login') }}">Login</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('jogos.index') }}">Gerenciar Jogos</a></li>
-                    <li><a href="{{ url_for('times.index') }}">Gerenciar Times</a></li>
-                    <li><a href="{{ url_for('auth.logout') }}">Logout</a></li>
-                    {% endif %}
-                </ul>
-            </div>
-        </div>
-    </nav>
+<nav class="navbar navbar-default   ">
+    <a class="navbar-brand" href="{{ url_for('main.index') }}" style="padding-top: 15px;">Brasileirão</a>
+
+    <ul class="navbar-nav flex-grow-1 p-2 bd-highlight ">
+        <li class="nav-item"><a href="{{ url_for('main.index') }}">Home</a></li>
+    </ul>
+
+    <ul class="navbar-nav flex-row">
+        {% if current_user.is_anonymous %}
+        <li class="p-2 bd-highlight"><a href="{{ url_for('auth.login') }}">Login</a></li>
+        {% else %}
+        <li class="p-2 bd-highlight"><a href="{{ url_for('jogos.index') }}">Gerenciar Jogos</a></li>
+        <li class="p-2 bd-highlight"><a href="{{ url_for('times.index') }}">Gerenciar Times</a></li>
+        <li class="p-2 bd-highlight"><a href="{{ url_for('auth.logout') }}">Logout</a></li>
+        {% endif %}
+    </ul>
+</nav>
 {% endblock %}
 
 {% block content %}
-	<div class="container">
-	  {% with messages = get_flashed_messages() %}
-			{% for message in messages %}
-            <div class="alert alert-info" role="alert">{{ message }}</div>
-			{% endfor %}
-		{% endwith %}
-		{% block app_content %}{% endblock %}
-	</div>
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">{{ message }}</div>
+    {% endfor %}
+    {% endwith %}
+    {% block app_content %}{% endblock %}
+</div>
 {% endblock %}
