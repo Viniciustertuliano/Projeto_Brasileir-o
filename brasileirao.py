@@ -9,7 +9,7 @@ from config import Config
 # Tecnologia Web 01/2020 - ADS/SI
 # Grupo XX:
 # nome.sobrenome@aluno.faculdadeimpacta.com.br
-# nome.sobrenome@aluno.faculdadeimpacta.com.br
+# abner.porto@aluno.faculdadeimpacta.com.br
 # nome.sobrenome@aluno.faculdadeimpacta.com.br
 
 app = Flask(__name__)
