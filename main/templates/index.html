@@ -24,15 +24,16 @@
 		<th scope="row"><img class="escudo-mini" src="{{ time.escudo }}"></th>
 		<td>{{ time.nome }}</td>
 		<td>{{ time.pontos }}</td>
-		<td> J </td>
+		<td>{{ time.jogos | length }}</td>
 		<td>{{ time.vitorias }}</td>
 		<td>{{ time.empates }}</td>
 		<td>{{ time.derrotas }}</td>
 		<td>{{ time.gols_pro }}</td>
 		<td>{{ time.gols_contra }}</td>
 		<td>{{ time.saldo_gols }}</td>
-		<td>{{ time.cartoes_vermelhos }}</td>
 		<td>{{ time.cartoes_amarelos }}</td>
+		<td>{{ time.cartoes_vermelhos }}</td>
+		
 	  </tr>
 	  {% endfor %}
 	</tbody>
