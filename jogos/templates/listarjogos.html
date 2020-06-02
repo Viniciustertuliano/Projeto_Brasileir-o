@@ -37,6 +37,8 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 2</h5>
+          {% if jogos[2] %}
+
           {% for jogo in jogos[2] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -56,6 +58,13 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %
         </div>
       </div>
     </div>
@@ -65,6 +74,7 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 3</h5>
+          {% if jogos[3] %}
           {% for jogo in jogos[3] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -86,6 +96,11 @@
             </div>
           </div>
           {% endfor %}
+          {% else %}
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -96,6 +111,7 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 4</h5>
+          {% if jogos[4] %}
           {% for jogo in jogos[4] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -115,6 +131,13 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %}
+
         </div>
       </div>
     </div>
@@ -124,6 +147,7 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 5</h5>
+          {% if jogos[5] %}
           {% for jogo in jogos[5] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -143,6 +167,11 @@
             </div>
           </div>
           {% endfor %}
+          {% else %}
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -152,6 +181,7 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 6</h5>
+          {% if jogos[6] %}
           {% for jogo in jogos[6] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -171,6 +201,13 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+            <h5 class="card-title text-center">
+              Não existe jogos para essa rodada!!!
+            </h5>
+          {% endif %}
+
         </div>
       </div>
     </div>
@@ -180,6 +217,7 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 7</h5>
+          {% if jogos[7] %}
           {% for jogo in jogos[7] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -199,6 +237,13 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -208,6 +253,7 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 8</h5>
+          {% if jogos[8] %}
           {% for jogo in jogos[8] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -227,6 +273,13 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %}
+
         </div>
       </div>
     </div>
@@ -236,6 +289,9 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 9</h5>
+
+          {% if jogos[9] %}
+
           {% for jogo in jogos[9] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -255,6 +311,13 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+          <h5 class="card-title text-center">
+            Não existe jogos para essa rodada!!!
+          </h5>
+          {% endif %}
+
         </div>
       </div>
     </div>
@@ -264,6 +327,9 @@
       <div class="container d-flex justify-content-center">
         <div class="card d-xl-inline-flex w-50">
           <h5 class="card-header text-center ">Rodada 10</h5>
+
+          {% if jogos[10] %}
+
           {% for jogo in jogos[10] %}
           <div class="container d-flex justify-content-center">
             <div class="card  d-xl-inline-flex p-2  " style="width: 30rem;">
@@ -283,6 +349,12 @@
             </div>
           </div>
           {% endfor %}
+
+          {% else %}
+            <h5 class="card-title text-center">
+              Não existe jogos para essa rodada!!!
+            </h5>
+          {% endif%}
         </div>
       </div>
     </div>
